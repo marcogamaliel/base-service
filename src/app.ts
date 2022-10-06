@@ -1,9 +1,14 @@
 import koaHelmet from "koa-helmet"
 import nocache from "koajs-nocache"
 import { createKoaServer } from "routing-controllers"
+import { CorsMiddleware } from "./application/middlewares/cors/cors.middleware"
+import { ErrorHandlerMiddleware } from "./application/middlewares/error-handler/error-hanler.middleware"
 
 const controllers: any[] = []
-const middlewares: any[] = []
+const middlewares: any[] = [
+  ErrorHandlerMiddleware,
+  CorsMiddleware,
+]
 
 const app = createKoaServer({
   controllers,
