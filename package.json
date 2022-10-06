@@ -1,0 +1,32 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "base project",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon -r dotenv/config --exec ts-node src/index.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "base-project"
+  ],
+  "author": "Marco Galindo",
+  "license": "ISC",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "dotenv": "^16.0.3",
+    "inversify": "^6.0.1",
+    "koa": "^2.13.4",
+    "koa-cache-control": "^2.0.0",
+    "koa-helmet": "^6.1.0",
+    "koajs-nocache": "^2.1.0",
+    "routing-controllers": "^0.9.0",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.2",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
