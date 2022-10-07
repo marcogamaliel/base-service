@@ -25,12 +25,21 @@
       "error",
       "never"
     ],
-    "import/extensions": [
-      "error",
-      "never"
-    ],
     "import/no-cycle": "off",
     "import/prefer-default-export": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ]
+      }
+    ],
     "class-methods-use-this": "off",
     "max-len": [
       "error",

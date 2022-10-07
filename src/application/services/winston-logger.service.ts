@@ -1,7 +1,7 @@
 import { injectable } from 'inversify'
 import winston from 'winston'
-import { Logger } from '../../domain/model/logger.model'
-import { LoggerFactory } from '../../domain/services/logger-factory/logger-factory.service'
+import { Logger } from '../../domain/model/support/logger.model'
+import { LoggerFactory } from '../../domain/services/support/logger-factory/logger-factory.service'
 import { CorrelationIdService } from './correlation-id.service'
 
 @injectable()
