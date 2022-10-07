@@ -1,13 +1,19 @@
 import koaHelmet from "koa-helmet"
 import nocache from "koajs-nocache"
 import { createKoaServer } from "routing-controllers"
+import { ExampleController } from "./application/controllers/example.controller"
+import { CorrelationIdMiddleware } from "./application/middlewares/correlation-id/correlation-id.middleware"
 import { CorsMiddleware } from "./application/middlewares/cors/cors.middleware"
 import { ErrorHandlerMiddleware } from "./application/middlewares/error-handler/error-hanler.middleware"
+import { logger } from "./application/services/logger.service"
 
-const controllers: any[] = []
+const controllers: any[] = [
+  ExampleController,
+]
 const middlewares: any[] = [
   ErrorHandlerMiddleware,
   CorsMiddleware,
+  CorrelationIdMiddleware,
 ]
 
 const app = createKoaServer({
@@ -21,7 +27,7 @@ app.init = (): void => {
   app.listen(port)
   app.use(koaHelmet)
   app.use(nocache)
-  console.log(`Server listening on port ${port}`)
+  logger.info(`Server listening on port ${port}`)
 }
 
 app.boot = (): void => {
