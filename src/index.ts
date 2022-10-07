@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 import app from './app'
-import { logger } from './application/services'
+import { logger } from './domain/services'
 
 process.on('uncaughtException', (e: Error): void => {
   logger.error('Uncaugth Exception :', e)

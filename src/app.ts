@@ -1,11 +1,11 @@
-import koaHelmet from "koa-helmet"
-import nocache from "koajs-nocache"
-import { createKoaServer } from "routing-controllers"
-import { ExampleController } from "./application/controllers/example.controller"
-import { CorrelationIdMiddleware } from "./application/middlewares/correlation-id/correlation-id.middleware"
-import { CorsMiddleware } from "./application/middlewares/cors/cors.middleware"
-import { ErrorHandlerMiddleware } from "./application/middlewares/error-handler/error-hanler.middleware"
-import { logger } from "./application/services"
+import koaHelmet from 'koa-helmet'
+import nocache from 'koajs-nocache'
+import { createKoaServer } from 'routing-controllers'
+import { ExampleController } from './application/controllers/example.controller'
+import { CorrelationIdMiddleware } from './application/middlewares/correlation-id/correlation-id.middleware'
+import { CorsMiddleware } from './application/middlewares/cors/cors.middleware'
+import { ErrorHandlerMiddleware } from './application/middlewares/error-handler/error-hanler.middleware'
+import { logger } from './domain/services'
 
 const controllers: any[] = [
   ExampleController,
