@@ -8,9 +8,11 @@ import { CorrelationIdService } from './correlation-id.service'
 export class WinstonLoggerFactory implements LoggerFactory {
   create(): Logger {
     const environments = ['production', 'development', 'test']
-    const print = environments.includes(process.env.NODE_ENV ?? '') ?
-    ({timestamp, level, message, correlationId}: any) => `${timestamp} ${level} [${correlationId}] ${message}`
-    : ({level, message}: any) => `${level} ${message}`
+    const print = environments.includes(process.env.NODE_ENV ?? '')
+      ? ({
+        timestamp, level, message, correlationId,
+      }: any) => `${timestamp} ${level} [${correlationId}] ${message}`
+      : ({ level, message }: any) => `${level} ${message}`
 
     return winston.createLogger({
       format: winston.format.combine(

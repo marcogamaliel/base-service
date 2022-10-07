@@ -3,7 +3,6 @@ import { logger } from '../../../domain/services'
 
 @Middleware({ type: 'before' })
 export class ErrorHandlerMiddleware implements KoaMiddlewareInterface {
-
   public async use(ctx: any, next: () => Promise<any>): Promise<any> {
     await next()
     if (ctx.status >= 300) this.processError(ctx)

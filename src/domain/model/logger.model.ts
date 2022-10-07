@@ -20,4 +20,4 @@ type LogCallback = (
   level?: string,
   message?: string,
   meta?: any
-) => void;
+) => void

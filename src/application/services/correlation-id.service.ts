@@ -9,8 +9,8 @@ export abstract class CorrelationIdService {
 
   public static withId(fn: () => void, id: string): void {
     this.store.run(() => {
-      this.store.set(CORRELATION_ID_KEY, id || uuid());
-      fn();
+      this.store.set(CORRELATION_ID_KEY, id || uuid())
+      fn()
     })
   }
 
@@ -18,7 +18,7 @@ export abstract class CorrelationIdService {
     return CorrelationIdService.store.get(CORRELATION_ID_KEY)
   }
 
-  public static bindEmitter(emitter: EventEmitter){
+  public static bindEmitter(emitter: EventEmitter) {
     this.store.bindEmitter(emitter)
   }
 

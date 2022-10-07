@@ -19,7 +19,7 @@ const middlewares: any[] = [
 const app = createKoaServer({
   controllers,
   middlewares,
-  validation: true
+  validation: true,
 })
 
 app.init = (): void => {

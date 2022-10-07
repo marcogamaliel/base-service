@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "nodemon -r dotenv/config --exec ts-node src/index.ts",
+    "lint": "eslint --ext .ts src/",
     "test": "jest"
   },
   "keywords": [
@@ -22,6 +23,7 @@
     "koa-cache-control": "^2.0.0",
     "koa-helmet": "^6.1.0",
     "koajs-nocache": "^2.1.0",
+    "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.9.0",
     "typescript": "^4.8.4",
     "uuid": "^9.0.0",
@@ -31,6 +33,12 @@
     "@types/cls-hooked": "^4.3.3",
     "@types/node": "^18.8.2",
     "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1"
   }

@@ -1,9 +1,9 @@
-import { Container } from "inversify"
-import { WinstonLoggerFactory } from "./application/services/winston-logger.service"
-import { LoggerFactory } from "./domain/services/logger-factory/logger-factory.service"
+import { Container } from 'inversify'
+import { WinstonLoggerFactory } from './application/services/winston-logger.service'
+import { LoggerFactory } from './domain/services/logger-factory/logger-factory.service'
 
 export const TYPES = {
-  LoggerFactory: Symbol.for("LoggerFactory"),
+  LoggerFactory: Symbol.for('LoggerFactory'),
 }
 
 export const container = new Container()
