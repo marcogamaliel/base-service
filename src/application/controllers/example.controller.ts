@@ -1,5 +1,5 @@
 import { Get, JsonController } from "routing-controllers"
-import { logger } from "../services/logger.service"
+import { logger } from "../services"
 
 @JsonController('/example')
 export class ExampleController {

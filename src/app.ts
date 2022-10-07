@@ -5,7 +5,7 @@ import { ExampleController } from "./application/controllers/example.controller"
 import { CorrelationIdMiddleware } from "./application/middlewares/correlation-id/correlation-id.middleware"
 import { CorsMiddleware } from "./application/middlewares/cors/cors.middleware"
 import { ErrorHandlerMiddleware } from "./application/middlewares/error-handler/error-hanler.middleware"
-import { logger } from "./application/services/logger.service"
+import { logger } from "./application/services"
 
 const controllers: any[] = [
   ExampleController,

@@ -1,8 +1,10 @@
+import { injectable } from "inversify"
 import winston from "winston"
 import { Logger } from "../../domain/model/logger.model"
-import { CorrelationIdService } from "./correlation-id.service"
+import { LoggerFactory } from "../../domain/services/logger-factory/logger-factory.service"
 
-class LoggerFactory {
+@injectable()
+export class WinstonLoggerFactory implements LoggerFactory {
   create(getCorrelationId: () => string): Logger {
     return winston.createLogger({
       format: winston.format.combine(
@@ -25,5 +27,3 @@ class LoggerFactory {
     })
   }
 }
-
-export const logger = new LoggerFactory().create(CorrelationIdService.getId)

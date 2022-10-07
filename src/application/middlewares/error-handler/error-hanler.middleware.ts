@@ -1,5 +1,5 @@
 import { KoaMiddlewareInterface, Middleware } from 'routing-controllers'
-import { logger } from '../../services/logger.service'
+import { logger } from '../../services'
 
 @Middleware({ type: 'before' })
 export class ErrorHandlerMiddleware implements KoaMiddlewareInterface {
