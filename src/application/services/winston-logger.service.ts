@@ -18,7 +18,7 @@ export class WinstonLoggerFactory implements LoggerFactory {
       format: winston.format.combine(
         winston.format((info) => ({
           ...info,
-          correlationId: CorrelationIdService.getId || 'no-correlation-id',
+          correlationId: CorrelationIdService.getId() || 'no-correlation-id',
         }))(),
         winston.format.timestamp(),
         winston.format.errors({ stack: true }),
